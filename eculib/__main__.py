@@ -6,7 +6,7 @@ from eculib import KlineAdapter
 def GetFtdiDevices():
 	dev_list = {}
 	for device in Driver().list_devices():
-		dev_info = map(lambda x: x.decode('latin1'), device)
+		dev_info =  device
 		vendor, product, serial = dev_info
 		dev_list[serial] = (vendor, product)
 	return dev_list
